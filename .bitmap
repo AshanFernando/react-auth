@@ -44,6 +44,20 @@
             }
         }
     },
+    "auth/auth-provider": {
+        "name": "auth/auth-provider",
+        "scope": "",
+        "version": "",
+        "defaultScope": "bit-bazaar.shell-app",
+        "mainFile": "index.ts",
+        "rootDir": "shell-app/auth/auth-provider",
+        "config": {
+            "bit-bazaar.design/dev/react-mui": {},
+            "teambit.envs/envs": {
+                "env": "bit-bazaar.design/dev/react-mui"
+            }
+        }
+    },
     "dev/react-mui": {
         "name": "dev/react-mui",
         "scope": "bit-bazaar.design",

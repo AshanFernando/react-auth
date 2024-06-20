@@ -1,7 +1,7 @@
 // HomePage.tsx
 import React, { ReactNode } from 'react';
 import { Navigate } from 'react-router-dom';
-import { useAuth0 } from '@auth0/auth0-react';
+import { useAuth } from '@bit-bazaar/shell-app.auth.auth-provider';
 import { LoginButton } from '@bit-bazaar/shell-app.ui.login-button';
 
 export type HomePageProps = {
@@ -12,7 +12,7 @@ export type HomePageProps = {
 };
 
 export function HomePage({ children }: HomePageProps) {
-  const { isAuthenticated } = useAuth0();
+  const { isAuthenticated } = useAuth();
 
   if (isAuthenticated) {
     return <Navigate to="/profile" />;

@@ -1,6 +1,6 @@
 // AuthGuard.tsx
 import React from 'react';
-import { useAuth0 } from '@auth0/auth0-react';
+import { useAuth } from '@bit-bazaar/shell-app.auth.auth-provider';
 import { Navigate } from 'react-router-dom';
 import type { ReactNode } from 'react';
 
@@ -12,7 +12,7 @@ export type AuthGuardProps = {
 };
 
 export function AuthGuard({ children }: AuthGuardProps) {
-  const { isAuthenticated, user, isLoading } = useAuth0();
+  const { isAuthenticated, user, isLoading } = useAuth();
 
   if (isLoading) {
     return <div>Loading ...</div>; // Display a loading indicator while checking authentication status
